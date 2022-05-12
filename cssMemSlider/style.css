@@ -1,0 +1,89 @@
+html{
+  font-family: 'Finger Paint', cursive;
+  font-size: 10px;
+}
+
+.body{
+  background-color: aquamarine;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slider{
+  width: 50vw;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: pink;
+}
+
+.items{
+  width: 200vw;
+  display: flex;
+  height: 50vh;
+}
+
+.item{
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  height: 100%;
+  transition: 0.5s;
+}
+
+input{
+  position: absolute;
+  visibility: hidden;
+}
+
+img{
+  height: 80%;
+  width: 150%;
+}
+
+.text{
+  text-align: center;
+  font-size: 3rem;
+  padding: 1vw 0;
+}
+
+.controls{
+  display: flex;
+  position: absolute;
+  gap: 0.5vw;
+  bottom: 2vw;
+}
+
+label{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  background-color: aquamarine;
+  opacity: .4;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+
+label:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+#s1:checked ~ .slide1{
+  margin-left: 0;
+}
+
+#s2:checked ~ .slide1{
+  margin-left: -50vw;
+}
+
+#s3:checked ~ .slide1{
+  margin-left: -100vw;
+}
+
+#s4:checked ~ .slide1{
+  margin-left: -150vw;
+}
