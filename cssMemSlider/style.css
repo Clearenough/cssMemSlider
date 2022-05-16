@@ -62,7 +62,7 @@ img{
   text-align: center;
   font-size: 3rem;
   line-height: 150%;
-
+  transition: .5s all;
   height: 4vw;
   display: flex;
   align-items: center;
@@ -92,34 +92,34 @@ label:hover{
   background-color: beige;
 }
 
-#s1:checked ~ .slide1{
+#s1:checked ~ .items .slide1{
   margin-left: 0;
 }
 
-#s1:checked ~ .title1{
+#s1:checked ~ .footer .title1{
   margin-top: 0vw;
 }
 
-#s2:checked ~ .slide1{
+#s2:checked ~ .items .slide1{
   margin-left: -51vw;
 }
 
-#s2:checked ~ .title1{
+#s2:checked ~ .footer .title1{
   margin-top: -4vw;
 }
 
-#s3:checked ~ .slide1{
+#s3:checked ~ .items .slide1{
   margin-left: -102vw;
 }
 
-#s3:checked ~ .title1{
+#s3:checked ~ .footer .title1{
   margin-top: -8vw;
 }
 
-#s4:checked ~ .slide1{
+#s4:checked ~ .items .slide1{
   margin-left: -153vw;
 }
 
-#s4:checked ~ .title1{
+#s4:checked ~ .footer .title1{
   margin-top: -12vw;
 }
