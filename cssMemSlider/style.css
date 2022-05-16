@@ -18,19 +18,22 @@ html{
   left: 50%;
   transform: translateX(-50%);
   background-color: pink;
+  padding: 0 1vw 0 1vw;
+  flex-wrap: wrap;
 }
 
 .items{
   width: 200vw;
   display: flex;
   height: 50vh;
+  gap: 1vw;
 }
 
 .item{
   display: flex;
   width: 50vw;
   flex-direction: column;
-  height: 100%;
+  /* height: 100%; */
   transition: 0.5s;
 }
 
@@ -41,20 +44,32 @@ input{
 
 img{
   height: 80%;
-  width: 150%;
+  width: 50vw;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list{
+  height: 4vw;
 }
 
 .text{
   text-align: center;
   font-size: 3rem;
-  padding: 1vw 0;
+  line-height: 150%;
+  /* padding: 1vw 0; */
+  height: 4vw;
+  display: flex;
+  align-items: center;
 }
 
 .controls{
   display: flex;
-  position: absolute;
   gap: 0.5vw;
-  bottom: 2vw;
 }
 
 label{
@@ -72,18 +87,22 @@ label:hover{
   opacity: 1;
 }
 
+#s1:checked, #s2:checked, #s3:checked, #s4:checked{
+  opacity: 1;
+}
+
 #s1:checked ~ .slide1{
   margin-left: 0;
 }
 
 #s2:checked ~ .slide1{
-  margin-left: -50vw;
+  margin-left: -51vw;
 }
 
 #s3:checked ~ .slide1{
-  margin-left: -100vw;
+  margin-left: -102vw;
 }
 
 #s4:checked ~ .slide1{
-  margin-left: -150vw;
+  margin-left: -153vw;
 }
