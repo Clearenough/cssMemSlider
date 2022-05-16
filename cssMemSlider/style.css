@@ -1,0 +1,141 @@
+html{
+  font-family: 'Finger Paint', cursive;
+  font-size: 10px;
+}
+
+.body{
+  background-color: aquamarine;
+  height: 100vh;
+  width: 100vw;
+}
+
+.slider{
+  width: 50vw;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: pink;
+  padding: 0 1vw 0 1vw;
+  flex-wrap: wrap;
+}
+
+.items{
+  width: 200vw;
+  display: flex;
+  height: 50vh;
+  gap: 1vw;
+}
+
+.item{
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+  /* height: 100%; */
+  transition: 0.5s;
+}
+
+input{
+  position: absolute;
+  visibility: hidden;
+}
+
+img{
+  height: 80%;
+  width: 50vw;
+}
+
+.footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list{
+  height: 4vw;
+  overflow: hidden;
+}
+
+.text{
+  text-align: center;
+  font-size: 3rem;
+  line-height: 150%;
+  transition: .5s all;
+  height: 4vw;
+  display: flex;
+  align-items: center;
+}
+
+.controls{
+  display: flex;
+  gap: 0.5vw;
+}
+
+label{
+  cursor: pointer;
+}
+
+.decor{
+  width: 3vw;
+  height: 3vw;
+  border-radius: 100%;
+  background-color: aquamarine;
+  opacity: .4;
+  cursor: pointer;
+  transition: 0.7s ease;
+}
+
+.decor:hover{
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+#s1:checked ~ .controls .decor, #s2:checked ~ .controls .decor, #s3:checked ~ .controls .decor, #s4:checked ~ .controls .decor{
+  background-color: beige;
+}
+
+#s1:checked ~ .items .slide1{
+  margin-left: 0;
+}
+
+#s1:checked ~ .footer .title1{
+  margin-top: 0vw;
+}
+
+#s2:checked ~ .items .slide1{
+  margin-left: -51vw;
+}
+
+#s2:checked ~ .footer .title1{
+  margin-top: -4vw;
+}
+
+#s3:checked ~ .items .slide1{
+  margin-left: -102vw;
+}
+
+#s3:checked ~ .footer .title1{
+  margin-top: -8vw;
+}
+
+#s4:checked ~ .items .slide1{
+  margin-left: -153vw;
+}
+
+#s4:checked ~ .footer .title1{
+  margin-top: -12vw;
+}
+
+@media (max-width: 1000px) {
+  .footer{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1vw;
+  }
+  .list{
+    align-self: flex-start;
+    margin-bottom: 3vw;
+  }
+}
