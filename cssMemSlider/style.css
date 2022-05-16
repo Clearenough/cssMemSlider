@@ -74,6 +74,10 @@ img{
 }
 
 label{
+  cursor: pointer;
+}
+
+.decor{
   width: 3vw;
   height: 3vw;
   border-radius: 100%;
@@ -83,12 +87,12 @@ label{
   transition: 0.7s ease;
 }
 
-label:hover{
+.decor:hover{
   transform: scale(1.1);
   opacity: 1;
 }
 
-#s1:focus, #s2:focus, #s3:focus, #s4:focus{
+#s1:checked ~ .controls .decor, #s2:checked ~ .controls .decor, #s3:checked ~ .controls .decor, #s4:checked ~ .controls .decor{
   background-color: beige;
 }
 
@@ -122,4 +126,16 @@ label:hover{
 
 #s4:checked ~ .footer .title1{
   margin-top: -12vw;
+}
+
+@media (max-width: 1000px) {
+  .footer{
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1vw;
+  }
+  .list{
+    align-self: flex-start;
+    margin-bottom: 3vw;
+  }
 }
